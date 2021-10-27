@@ -1,0 +1,19 @@
+#90X avec nom (paramètre nom= "" [par défaut : subdivision=true)
+R1 = AA910.A910-ind1:0 AND AA910.A910Sa:${1} NOT(A008_AS:Tb8) 
+R2 = AA911.A911-ind1:0 AND AA911.A911Sa:${1} NOT(A008_AS:Tb8) 
+R3 = AA912.A912-ind1:0 AND AA910.A912Sa:${1} NOT(A008_AS:Tb8) 
+
+#90X avec nom et pas de subdivision (paramètre nom="" subdivision=false)
+R = AA910.A910-ind1:0 AND AA910.A910Sa:${1} AND NOT AA210.A210Sb:* NOT(A008_AS:Tb8) 
+R = AA911.A911-ind1:0 AND AA911.A911Sa:${1} AND NOT AA211.A211Sb:* NOT(A008_AS:Tb8) 
+R = AA912.A912-ind1:0 AND AA910.A912Sa:${1} AND NOT AA212.A212Sb:* NOT(A008_AS:Tb8) 
+
+#90X avec nom et pas de qualificatif (paramètre nom="" subdivision=false)
+R = AA910.A910-ind1:0 AND AA910.A910Sa:${1} AND NOT AA210.A210Sc:* NOT(A008_AS:Tb8) 
+R = AA911.A911-ind1:0 AND AA911.A911Sa:${1} AND NOT AA211.A211Sc:* NOT(A008_AS:Tb8) 
+R = AA912.A912-ind1:0 AND AA910.A912Sa:${1} AND NOT AA212.A212Sc:* NOT(A008_AS:Tb8) 
+
+#90X avec nom et pas de subdivision et pas de qualificatif(paramètre nom="" subdivision=false)
+R = AA910.A910-ind1:0 AND AA910.A910Sa:${1} NOT AA210.A210Sb:* NOT AA210.A210Sc:* NOT(A008_AS:Tb8) 
+R = AA911.A911-ind1:0 AND AA911.A911Sa:${1} NOT AA211.A211Sb:* NOT AA211.A211Sc:* NOT(A008_AS:Tb8) 
+R = AA912.A912-ind1:0 AND AA910.A912Sa:${1} NOT AA212.A212Sb:* NOT AA212.A212Sc:* NOT(A008_AS:Tb8) 
