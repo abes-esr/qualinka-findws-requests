@@ -1,0 +1,7 @@
+########################################################################
+#Very important - rules number is important, don't duplicate them
+########################################################################
+
+#20X, 40X, 70X avec nom et prenom
+#1 nom et 1 prénom
+R1 = (AA200.A200Sa:${1} AND AA200.A200Sb_AS:${5}) AND NOT(A008_AS:Tp8)
